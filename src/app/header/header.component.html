@@ -1,0 +1,14 @@
+<header>
+
+    <h3><span>N</span>ews</h3>
+
+    <nav>
+        <a [routerLink]="['/']" >Home</a>
+        <a [routerLink]="['/login']">Login</a>
+        <a [routerLink]="['/register']">Register</a>
+        <a href="/python/">Create news</a>
+        <a href="/python/">All news</a>
+        <a [routerLink]="['/logout']" (click)="onLogout()">Logout</a>
+    </nav>
+
+</header>

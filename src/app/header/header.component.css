@@ -1,0 +1,38 @@
+header{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: black;
+    border-radius:50% 20%;
+}
+
+header a{
+    text-decoration: none;
+    color:white;
+}
+
+header h3{
+    flex:10%;
+    margin: 20px;
+
+}
+
+header nav{
+    flex:30%;
+
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header h3 span{
+    color:aqua;
+    font-size: 40px;
+}
