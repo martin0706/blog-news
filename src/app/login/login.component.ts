@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AuthService } from '../shared/services/auth.service';
 import { from } from 'rxjs';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -16,10 +18,14 @@ export class LoginComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = '';
 
-  constructor(private authService: AuthService) { }
+  constructor(public authService: AuthService,private router: Router) { }
+
+  @Input() 
+ 
   ngOnInit(): void {
-    
-      this.isLoggedIn = true;
+    console.log(this.authService.userData)
+    this.isLoggedIn = !!this.authService.userData;
+  
     
   }
   onSubmit(): void {
@@ -28,15 +34,12 @@ export class LoginComponent implements OnInit {
       next: data => {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
-        this.reloadPage();
+        this.router.navigate(['']);
       },
       error: err => {
         this.errorMessage = err.error.message;
         this.isLoginFailed = true;
       }
     });
-  }
-  reloadPage(): void {
-    window.location.reload();
   }
 }

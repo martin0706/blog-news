@@ -3,12 +3,13 @@
     <h3><span>N</span>ews</h3>
 
     <nav>
-        <a [routerLink]="['/']" >Home</a>
-        <a [routerLink]="['/login']">Login</a>
-        <a [routerLink]="['/register']">Register</a>
-        <a href="/python/">Create news</a>
-        <a href="/python/">All news</a>
-        <a [routerLink]="['/logout']" (click)="onLogout()">Logout</a>
+        <a  [routerLink]="['/']" >Home</a>
+        <a *ngIf="!authService.userData" [routerLink]="['/login']">Login</a>
+        <a *ngIf="!authService.userData"[routerLink]="['/register']">Register</a>
+        <a *ngIf="authService.userData as user" href="/python/">Create News</a>
+        <a *ngIf="authService.userData as user" href="/python/">All News</a>
+        <a *ngIf="authService.userData as user" [routerLink]="['/logout']" (click)="authService.SignOut()">Logout</a>
+        <a id="blue" *ngIf="authService.userData as user" [routerLink]="['/profil']">[{{authService.userData.email}}]</a>
     </nav>
 
 </header>

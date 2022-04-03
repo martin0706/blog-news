@@ -22,6 +22,10 @@ export class RegisterComponent implements OnInit {
   constructor(private authService: AuthService,private router: Router) { }
 
   ngOnInit(): void {
+    
+    this.isSuccessful  = !!this.authService.userData;
+    
+   
   }
   onSubmit(): void {
     console.log(this.form);
@@ -31,8 +35,7 @@ export class RegisterComponent implements OnInit {
         console.log(data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
-        this.router.navigate(['login']);
-        console.log( this.isSuccessful)
+        this.router.navigate(['']);
       },
       error: err => {
         this.errorMessage = err.error.message;
