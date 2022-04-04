@@ -1,0 +1,32 @@
+.create-news-inputs{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 20px auto;
+    gap:10px
+}
+
+.create-news-inputs label {
+    padding-top: 10px;
+    font-weight: bold;
+    color: green;
+}
+
+.submitbtn{
+    width: 150px;
+    padding: 10px;
+    background-color: green;
+    color:white;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.create-news-inputs input {
+    height: 30px;
+    border: 4px solid black;
+}
+
+.create-news-inputs textarea {
+    height: 80px;
+    border: 4px solid black;
+}

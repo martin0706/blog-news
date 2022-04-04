@@ -13,6 +13,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {AuthService} from './shared/services/auth.service'
 import { FormsModule }   from '@angular/forms';
+import { CreateNewsComponent } from './create-news/create-news.component';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 
 @NgModule({
@@ -22,13 +24,15 @@ import { FormsModule }   from '@angular/forms';
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CreateNewsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    FormsModule  
+    FormsModule,
+    AngularFirestoreModule
     
   ],
   providers: [AuthService],

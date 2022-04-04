@@ -1,0 +1,31 @@
+<body>
+    <form *ngIf="true" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div>
+            <div *ngIf="submitted">
+                <h5>You submitted successfully!</h5>
+          </div>
+            <h1>Create News</h1>
+            <hr>
+            <div class="create-news-inputs">
+                <label for="urlImage"><b>Url image</b></label>
+                <input type="text" placeholder="Enter Url image" name="urlImage" id="urlImage" required
+                    [(ngModel)]="form.urlImage" required urlImage #urlImage="ngModel">
+
+                <label for="title"><b>Title</b></label>
+                <input type="text" placeholder="Enter Title News" name="title" id="title" required
+                    [(ngModel)]="form.title" required title #title="ngModel">
+
+                <label for="desc"><b>Description</b></label>
+                <!-- <input type="password" placeholder="Enter Password" name="desc" [(ngModel)]="form.desc" required
+                minlength="6" #desc="ngModel" id="desc" required> -->
+                <textarea placeholder="Enter Password" name="desc" [(ngModel)]="form.desc" required minlength="6"
+                    #desc="ngModel" id="desc" required></textarea>
+                <hr>
+
+                <button type="submit" class="submitbtn">Create</button>
+            </div>
+        </div>
+
+    </form>
+
+</body>

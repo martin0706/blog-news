@@ -19,8 +19,9 @@ export class AuthGuardGuard implements CanActivate {
   ): Observable<boolean> | Promise<boolean> | boolean {
     console.log(!this.authService.userData)
     if (!!this.authService.userData) {
-      return false;
       this.router.navigate(['']);
+      return false;
+      
     }
     return true;
   }
