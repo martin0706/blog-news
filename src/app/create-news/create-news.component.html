@@ -1,10 +1,8 @@
 <body>
     <form *ngIf="true" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
         <div>
-            <div *ngIf="submitted">
-                <h5>You submitted successfully!</h5>
-          </div>
             <h1>Create News</h1>
+            <span class="messageSuccess" *ngIf="submitted">You submitted successfully!</span>
             <hr>
             <div class="create-news-inputs">
                 <label for="urlImage"><b>Url image</b></label>
