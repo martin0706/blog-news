@@ -1,0 +1,23 @@
+<body>
+
+    <h2>Own News</h2>
+    
+    <table>
+      <tr>
+        <th>№</th>     
+        <th>Title</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+      <tr  *ngFor="let item of news; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.desc}}</td>
+        <td>
+            <button class="btnEdit">Edit</button>
+            <button class="btnDelete" >Delete</button>
+        </td>
+      </tr>
+    </table>
+
+</body>

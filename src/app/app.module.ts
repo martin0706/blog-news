@@ -15,6 +15,7 @@ import {AuthService} from './shared/services/auth.service'
 import { FormsModule }   from '@angular/forms';
 import { CreateNewsComponent } from './create-news/create-news.component';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AllNewsComponent } from './all-news/all-news.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    CreateNewsComponent
+    CreateNewsComponent,
+    AllNewsComponent
   ],
   imports: [
     BrowserModule,

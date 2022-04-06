@@ -7,7 +7,7 @@
         <a *ngIf="!authService.userData" [routerLink]="['/login']">Login</a>
         <a *ngIf="!authService.userData"[routerLink]="['/register']">Register</a>
         <a *ngIf="authService.userData as user" [routerLink]="['/create/news']">Create News</a>
-        <a *ngIf="authService.userData as user" href="/python/">All News</a>
+        <a *ngIf="authService.userData as user"[routerLink]="['/news']">Own News</a>
         <a *ngIf="authService.userData as user" href="/python/">Read Leater</a>
         <a *ngIf="authService.userData as user" [routerLink]="['/logout']" (click)="authService.SignOut()">Logout</a>
         <a id="blue" *ngIf="authService.userData as user" [routerLink]="['/profil']">[{{authService.userData.email}}]</a>
