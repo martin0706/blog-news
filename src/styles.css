@@ -1,5 +1,7 @@
 app-root{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     width: 80%;
     min-height: 100vh;
     margin:0;
@@ -8,4 +10,33 @@ app-root{
     background-color: ghostwhite;
     border-radius: 2%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+article {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+main {
+    
+        text-align:center;
+      
+        display:flex;
+       
+        flex-direction:column;
+       
+        min-height:85vh;
+      
+}
+
+header, main, footer {
+    flex-shrink: 0;
+}
+
+footer{
+    display: block;
+    margin-top: 20px;
+    width: 100%;
 }
