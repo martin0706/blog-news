@@ -3,13 +3,13 @@
     <h3><span>N</span>ews</h3>
 
     <nav>
-        <a [routerLink]="['/']" >Home</a>
-        <a *ngIf="!authService.userData" [routerLink]="['/login']">Login</a>
-        <a *ngIf="!authService.userData"[routerLink]="['/register']">Register</a>
-        <a *ngIf="authService.userData as user" [routerLink]="['/create/news']">Create News</a>
-        <a *ngIf="authService.userData as user"[routerLink]="['/news']">Own News</a>
-        <a *ngIf="authService.userData as user" href="/python/">Read Leater</a>
-        <a *ngIf="authService.userData as user" [routerLink]="['/logout']" (click)="authService.SignOut()">Logout</a>
+        <a [routerLink]="['/']" ><span class="blue">H</span>ome</a>
+        <a *ngIf="!authService.userData" [routerLink]="['/login']"><span class="blue">L</span>ogin</a>
+        <a *ngIf="!authService.userData"[routerLink]="['/register']"><span class="blue">R</span>egister</a>
+        <a *ngIf="authService.userData as user" [routerLink]="['/create/news']"><span class="blue">C</span>reate News</a>
+        <a *ngIf="authService.userData as user"[routerLink]="['/news']"><span class="blue">O</span>wn News</a>
+        <a *ngIf="authService.userData as user" href="/python/"><span  class="blue">R</span>ead Leater</a>
+        <a *ngIf="authService.userData as user" [routerLink]="['/logout']" (click)="authService.SignOut()"><span  class="blue">L</span>ogout</a>
         <a id="blue" *ngIf="authService.userData as user" [routerLink]="['/profil']">[{{authService.userData.email}}]</a>
     </nav>
 

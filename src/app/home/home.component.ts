@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {INews} from '../shared/services/news'
 import { NewsService } from '../shared/services/news.service';
 import { map } from 'rxjs/operators';
+import { Router,ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class HomeComponent implements OnInit {
   news:any;
 
-  constructor(private newsService: NewsService) { }
+  constructor(private newsService: NewsService,private router: Router,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.newsService.getAll().snapshotChanges().pipe(
@@ -23,6 +24,12 @@ export class HomeComponent implements OnInit {
       console.log(this.news)
     });
 
+  }
+
+  ViewContentNews(news_id : any){
+    console.log(news_id)
+    let url: string = "/news/" + news_id
+         this.router.navigateByUrl(url);
   }
 
 }

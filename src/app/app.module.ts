@@ -16,6 +16,8 @@ import { FormsModule }   from '@angular/forms';
 import { CreateNewsComponent } from './create-news/create-news.component';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AllNewsComponent } from './all-news/all-news.component';
+import { EditNewsComponent } from './edit-news/edit-news.component';
+import { ContentNewsComponent } from './content-news/content-news.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { AllNewsComponent } from './all-news/all-news.component';
     LoginComponent,
     RegisterComponent,
     CreateNewsComponent,
-    AllNewsComponent
+    AllNewsComponent,
+    EditNewsComponent,
+    ContentNewsComponent
   ],
   imports: [
     BrowserModule,

@@ -2,13 +2,15 @@ body section{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap:20px;
 }
 
 body section article{
     display:flex;
     flex-wrap: wrap;
+    flex: 20%;
     flex-direction: column;
-    flex: 32.333333%;
     justify-items: center;
     align-items: center;
     border: 1px solid black;

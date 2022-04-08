@@ -4,18 +4,18 @@
     
     <table>
       <tr>
-        <th>№</th>     
-        <th>Title</th>
-        <th>Description</th>
-        <th>Actions</th>
+        <th class="number">№</th>     
+        <th class="title">Title</th>
+        <th class="desc">Description</th>
+        <th class="actions">Actions</th>
       </tr>
-      <tr  *ngFor="let item of news; let i = index">
-        <td>{{i + 1}}</td>
-        <td>{{item.title}}</td>
-        <td>{{item.desc}}</td>
-        <td>
-            <button class="btnEdit">Edit</button>
-            <button class="btnDelete" >Delete</button>
+      <tr *ngFor="let item of news; let i = index">
+        <td class="number">{{i + 1}}</td>
+        <td class="title" >{{item.title}}</td>
+        <td class="desc">{{item.desc}}</td>
+        <td class="actions">
+            <button class="btnEdit" [id]="item.id" (click)="ViewEditNews(item.id)">Edit</button>
+            <button class="btnDelete" [id]="item.id" (click)="deleteNews(item.id)">Delete</button>
         </td>
       </tr>
     </table>
