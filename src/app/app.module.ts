@@ -18,6 +18,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AllNewsComponent } from './all-news/all-news.component';
 import { EditNewsComponent } from './edit-news/edit-news.component';
 import { ContentNewsComponent } from './content-news/content-news.component';
+import { ReadLaterComponent } from './read-leater/read-later.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ContentNewsComponent } from './content-news/content-news.component';
     CreateNewsComponent,
     AllNewsComponent,
     EditNewsComponent,
-    ContentNewsComponent
+    ContentNewsComponent,
+    ReadLaterComponent
   ],
   imports: [
     BrowserModule,

@@ -8,8 +8,10 @@ import { CreateNewsComponent } from './create-news/create-news.component';
 import { AllNewsComponent } from './all-news/all-news.component';
 import { EditNewsComponent } from './edit-news/edit-news.component';
 import { ContentNewsComponent } from './content-news/content-news.component';
+import { ReadLaterComponent } from './read-leater/read-later.component';
 
 const routes: Routes = [
+  {path: "news/read-leater", component: ReadLaterComponent,pathMatch: 'full'},
   {path: "news/:id", component: ContentNewsComponent, pathMatch: 'full'},
   {path: "news/edit/:id", component: EditNewsComponent},
   {path: "create/news", component: CreateNewsComponent},

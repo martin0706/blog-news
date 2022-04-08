@@ -3,4 +3,6 @@ export interface INews {
     desc: string,
     urlImage: string,
     author: string 
+    memberLaterReade:any[]
+
  }

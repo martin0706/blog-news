@@ -1,0 +1,48 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgb(252, 227, 3,0.2);
+  }
+
+
+  .btnRead{
+    margin-left: 10px;
+    color: blue;
+    background-color: white;
+    padding: 5px 5px;
+    width: 70px;
+    border-radius: 10px;
+    border: 2px solid blue;
+}
+
+.btnRead:active{
+    margin-left: 10px;
+    color: white;
+    background-color: blue;
+    padding: 5px 5px;
+    width: 70px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.number{
+    width: 10%;
+}
+
+.title{
+    width: 20%;
+}
+
+.actions{
+    width: 20%;
+}

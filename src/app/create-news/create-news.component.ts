@@ -15,7 +15,8 @@ export class CreateNewsComponent implements OnInit {
     title: null,
     urlImage: null,
     desc:null,
-    author: "test"
+    author: null,
+    memberLaterReade: []
   };
 
   news: INews = this.form;
