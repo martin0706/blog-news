@@ -1,0 +1,7 @@
+main div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 70px auto;
+    word-break: break-all;
+}

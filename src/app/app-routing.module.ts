@@ -11,15 +11,15 @@ import { ContentNewsComponent } from './content-news/content-news.component';
 import { ReadLaterComponent } from './read-leater/read-later.component';
 
 const routes: Routes = [
-  {path: "news/read-leater", component: ReadLaterComponent,pathMatch: 'full'},
+  {path: "news/read-leater", component: ReadLaterComponent,pathMatch: 'full',canActivate: [AuthGuardGuard]},
   {path: "news/:id", component: ContentNewsComponent, pathMatch: 'full'},
-  {path: "news/edit/:id", component: EditNewsComponent},
-  {path: "create/news", component: CreateNewsComponent},
-  {path: "news", component: AllNewsComponent, pathMatch: 'full'},
-  {path:"register", component: RegisterComponent, canActivate: [AuthGuardGuard]},
-  {path:"login", component: LoginComponent, canActivate: [AuthGuardGuard]},
+  {path: "news/edit/:id", component: EditNewsComponent,canActivate: [AuthGuardGuard]},
+  {path: "create/news", component: CreateNewsComponent,canActivate: [AuthGuardGuard]},
+  {path: "news", component: AllNewsComponent, pathMatch: 'full',canActivate: [AuthGuardGuard]},
+  {path:"register", component: RegisterComponent},
+  {path:"login", component: LoginComponent},
   {path:"logout", component: HomeComponent},
-  {path:"", component: HomeComponent}
+  {path:"", component: HomeComponent,pathMatch: 'full'}
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection} from '@angular/fire/compat/firestore';
 import {INews} from '../services/news' 
-import { Observable } from 'rxjs';
+import { Observable , from} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +20,8 @@ export class NewsService {
     return this.newsRef;
   }
 
-  getOne(id: string):any {
-    return this.newsRef.doc(id).get().subscribe(data=>data.id);
+  getOne(id: string): any {
+    return this.newsRef.doc(id).get();
   }
 
   create(news: INews): any {
