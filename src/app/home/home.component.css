@@ -22,6 +22,10 @@ main section article {
 }
 
 main section article div{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start; /* ADDED */
    width:50%;
    margin-left: 50px;
    font-size: 12px;
@@ -36,11 +40,8 @@ main section article div div{
     
     margin-left: 50px;
  }
- main section h3{
-    float: left;
-}
+ 
  main section p{
-    float: left;
     /* width: 100px;
     white-space: nowrap;
     overflow: hidden;
@@ -58,6 +59,8 @@ main section article div div{
 }
 
 .read-all{
+    text-decoration: none;
+    margin-top: 20px;
     margin-left: 20px;
     cursor: pointer;
     background-color: green;

@@ -10,9 +10,10 @@
                 <h3> Title: {{item.title}}</h3>
                 <p> <b>Description:</b> {{item.desc.length > 50 ? item.desc.substring(0, 50) + "..." : item.desc}}</p>
                 <div>Author: {{item.author}}</div>
+                <a [routerLink]="['/']" class="read-all" [id]="item.id" (click)="ViewContentNews(item.id)">Read All Content</a>
             </div>
 
-            <a [routerLink]="['/']" class="read-all" [id]="item.id" (click)="ViewContentNews(item.id)">Read All Content</a>
+           
             <!-- <a class="read-later" [id]="item.id" (click)="AddNews(item.id)">Read Later</a> -->
             <span [style.visibility]="(!authService.userData) ? 'hidden' : 'visible' " >Read Later</span>
             <label  [style.visibility]="(!authService.userData) ? 'hidden' : 'visible' " class="switch">

@@ -19,28 +19,33 @@ export class RegisterComponent implements OnInit {
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = '';
-  constructor(private authService: AuthService,private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
-    
-    this.isSuccessful  = !!this.authService.userData;
-    
-   
+
+    this.isSuccessful = !!this.authService.userData;
+
+
   }
   onSubmit(): void {
     console.log(this.form);
-    const { email, password } = this.form;
-    from(this.authService.SignUp(email, password)).subscribe({
-      next: data => {
-        console.log(data);
-        this.isSuccessful = true;
-        this.isSignUpFailed = false;
-        this.router.navigate(['']);
-      },
-      error: err => {
-        this.errorMessage = err.error.message;
-        this.isSignUpFailed = true;
-      }
-    });
+    if (this.form.password !== this.form.pswrepeat) {
+      this.errorMessage = "Repeated password is wrong!"
+    } else {
+      const { email, password } = this.form;
+      from(this.authService.SignUp(email, password)).subscribe({
+        next: data => {
+          console.log(data);
+          this.isSuccessful = true;
+          this.isSignUpFailed = false;
+          this.router.navigate(['']);
+        },
+        error: err => {
+          console.log(err);
+          this.errorMessage = err.error.message;
+          this.isSignUpFailed = true;
+        }
+      });
+    }
   }
 }
