@@ -15,7 +15,7 @@
                 minlength="6" #password="ngModel" id="psw" required>
 
             <label for="pswrepeat"><b>Repeat Password</b></label>
-            <input type="password" placeholder="Repeat Password" name="pswrepeat" id="pswrepeat" required>
+            <input type="password" placeholder="Repeat Password" name="pswrepeat" id="pswrepeat" [(ngModel)]="form.pswrepeat" required>
             <hr>
 
             <button type="submit" class="registerbtn">Register</button>
